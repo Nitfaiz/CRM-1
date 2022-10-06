@@ -1,0 +1,323 @@
+@import url(httpsl://fonts.googleapis.com/css?family=Roboto:300);
+
+/* body {
+  background: #00a1ff;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+} */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.form-container {
+  
+  width: 310px;
+  background-color: #0e0000;
+  /* margin: auto; */
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 89%), 0 5px 5px 0 rgb(0 0 0 / 275%);
+  padding: 34px;
+  /* border: 3px solid #ffffee; */
+  border-radius: 7px;
+
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+ 
+ 
+}
+
+
+.form-field {
+  margin: 17px 48px 10px 46px;;
+  padding: 10px 15px;
+  /* font-size: 16px; */
+  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-field-signup {
+  margin: 0px 48px 0px 46px!important;
+}
+
+input {
+  background: #a7a5a5;
+  border-radius: 6px;
+}
+input:hover{
+  background-color: lightgray;
+  border-style: dashed;
+}
+
+
+
+button {
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  width: 25%;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+button:disabled {
+  cursor: default;
+}
+.heading{
+  display: flex;
+  justify-content: center;
+  color: #3f89f8;
+}
+.second{
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  margin-top: 10px;
+border-radius: 6px;
+}
+.first{
+  color: white;
+  margin-left: -6px;
+ 
+}
+.secondary{
+ display: flex;
+ margin-left: 146px;
+ padding-top: 11px;
+}
+/* .third{
+  background: #00a1ff;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  
+
+} */
+
+
+
+.category{
+  /* display: flex; */
+  /* flex-direction: column; */
+  background-color: black;
+  /* margin-left: -325px; */
+  /* background-image: url("https://media.istockphoto.com/photos/80s-disco-party-on-colorful-brick-wall-banner-3d-render-illustration-picture-id1165960488"); */
+  /* margin: 10px; */
+  position: fixed;
+  padding: 25px 15px;
+  height: 135%;
+  width: 15%;
+  /* margin-top: 40px; */
+  position: absolute;
+  
+  
+}
+.list{
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+  padding: 12.5px 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+.firstpage{
+  /* background: #00a1ff; */
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+
+
+}
+.secondpage{
+  /* background: #00a1ff; */
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .navbar{
+  background: #00a1ff;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: -8px;
+  padding: 0;
+} */
+.btnzero{
+  background: #4caf50;
+    color: white;
+    cursor: pointer;
+    /* width: 105px; */
+    /* margin-left: -1454px; */
+    background-color: darkgreen;
+    border-radius: 6px;
+    /* margin-top: -7/px; */
+    /* background-image: url("https://www.valueresearchonline.com/content-assets/images/33691_all-about-nav1__w660__.jpg"); */
+  
+}
+
+.sign-up {
+  position: relative;
+  top: 15px;
+}
+.sign_up_link {
+  color: #3f89f8;
+  text-decoration: none;
+}
+
+.navItem {
+  text-decoration: none;
+  /* display: flex;
+  justify-content: center; */
+}
+/* .third-page{
+  background-image: url("https://media.istockphoto.com/photos/80s-disco-party-on-colorful-brick-wall-banner-3d-render-illustration-picture-id1165960488");
+  margin: 0;
+  padding: 0;
+  height: 120%;
+  width: 100%;
+  
+} */
+
+.list:hover {
+  background-color: #8080802e;
+  /* font-size: 100px; */
+}
+.nav-span{
+  margin-left: 5px;
+}
+.tuesday{
+  background-color: gray;
+  color: #0e0000;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.tuesday h1 {
+  margin-left: 10px;
+}
+p{
+  display: flex;
+    justify-content: end;
+    margin-top: -25px;
+    color: #00098b;
+}
+h2{
+  display: flex;
+    position: absolute;
+    margin-left: 8px;
+
+}
+.Sales{
+  box-sizing: border-box;
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 271px;
+    margin-top: 86px;
+    position: fixed;
+}
+.Lead{
+  
+    box-sizing: border-box;
+      height: 500px;
+      width: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 271px;
+      margin-top: 86px;
+      position: fixed;
+  
+}
+.imagecam{
+
+  
+    margin: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 640px;
+    position: fixed;
+  
+}
+.whatsapp{
+  height: 600px;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 251px;
+  margin-top: 25px;
+  position: fixed;
+}
+.telegram{
+ 
+  height: 600px;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 251px;
+  margin-top: 25px;
+  position: fixed;
+}
+.report{
+  margin: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 540px;
+  position: fixed;
+}
+.third-page{
+  /* position: fixed ; */
+}
+.logout{
+  position: fixed;
+}
+.review{
+  margin-top: 100px;
+}
+.swal-overlay--show-modal .swal-modal{
+  opacity: 1;
+  pointer-events: auto;
+  box-sizing: border-box;
+  -webkit-animation: showSweetAlert .3s;
+  animation: showSweetAlert .3s;
+  will-change: transform;
+  /* color: rgb(255, 38, 38); */
+  /* background-color: rgb(0, 247, 255); */
+  border-radius: 18px;
+  z-index: -1;
+
+
+
+
+}
+
+.setting{
+  position: fixed;
+}
