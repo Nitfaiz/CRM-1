@@ -19,6 +19,9 @@ import Report from './components/Report';
 import Logut from './components/Logout';
 import Setting from './components/Setting';
 import Reviews from './components/Reviews';
+import Contactform from './components/Contactform';
+import Address from './components/Address';
+import Description from './components/Description';
 
 
 
@@ -33,12 +36,13 @@ function App() {
 
   return (
     <div className="App">
+    <Address/>
    
    
   <BrowserRouter>
   {sideNav()}
     <Routes>
-      <Route path = '/' element = {<Forms />}/>
+      <Route path = '/' element = {<Description />}/>
       <Route path = '/register' element = {<Register />}/>
       <Route exact path='/dashboard' element = {<Dashboard/>}/>
       <Route path='/sales' element = {<Sales/>}/>
@@ -56,6 +60,7 @@ function App() {
       <Route path='/logout' element = {<Logut/>}/>
       <Route path='/setting' element = {<Setting/>}/>
       <Route exact path= '/reviews' element = {<Reviews/>}/>
+      <Route exact path = '/contactform' element = {<Contactform/>}/>
      
       {/* <Route exact path='/overview' element = {<Overview/>} */}
 
@@ -67,6 +72,7 @@ function App() {
 
       </Routes>
       </BrowserRouter>
+     
 
       {/* <Forms/>
       <Register/> */}
