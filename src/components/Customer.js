@@ -99,7 +99,7 @@ const Customer =() => {
     },[])
    
     return(
-        <div style={{width:'80%', height:'50%' ,display : 'flex' ,position:'fixed' ,marginLeft:'255px',marginTop:'55px'}}>
+        <div style={{width:'80%', height:'50%'}}>
             {
                 console.log("dataaaaaaaa", data)
             }

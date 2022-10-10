@@ -76,7 +76,7 @@ function Admin() {
   fetchData();
   }, [])
   return (
-    <div className="Admin" style={{width:'50%', height:'50%' ,marginLeft:'400px' , position:'fixed'}}>
+    <div className="Admin" style={{width:'30%', height:'30%'}}>
       <Doughnut data={data}/>
     </div>
   );

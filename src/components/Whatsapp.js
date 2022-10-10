@@ -1,40 +1,109 @@
-import React from "react";
-import { Line } from "react-chartjs-2";
+import {useEffect, useState} from 'react';
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+  } from 'chart.js';
 
-const Whatsapp = () => {
-  const lineChartData = {
-    labels: ["October", "November", "December"],
-    datasets: [
-      {
-        data: [8137119, 9431691, 10266674],
-        label: "Active user",
-        borderColor: "#3333ff",
-        fill: true,
-        lineTension: 0.5
+import { Bar } from 'react-chartjs-2';
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+const options = {
+    indexAxis: 'y',
+    elements: {
+      bar: {
+        borderWidth: 2,
       },
-      {
-        data: [1216410, 1371390, 1477380],
-        label: "Inactive",
-        borderColor: "#ff3333",
-        backgroundColor: "rgba(255, 0, 0, 0.5)",
-        fill: true,
-        lineTension: 0.5
-      }
-    ]
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'right',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Whatsapp Bar Chart',
+      },
+    },
   };
 
-  return (
-    <div  className="whatsapp">
-    <Line
-      type="line" width={100} height={40} options={{ title: {   display: true,  text: "COVID-19 Cases of Last6 Months",fontSize: 20  },
-        legend: {
-          display: true, //Is the legend shown?
-          position: "top" //Position of the legend.
+const Customer =() => {
+    const [data, setData] = useState({
+        labels:['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        datasets: [
+          {
+            label: 'Dataset 1',
+            data:[],
+            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(25, 90, 13, 0.5)',
+          },
+          {
+            label: 'Dataset 2',
+            data:[],
+            borderColor: 'rgb(53, 162, 235)',
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+          },
+        ],
+      });
+    useEffect(()=> {
+       const fetchData= async()=> {
+           const url = 'https://jsonplaceholder.typicode.com/comments'
+           const labelSet = []
+           const dataSet1 = [];
+           const dataSet2 = [];
+         await fetch(url).then((data)=> {
+             console.log("Api data", data)
+             const res = data.json();
+             return res
+         }).then((res) => {
+             console.log("ressss", res)
+            for (const val of res) {
+                dataSet1.push(val.id);
+                dataSet2.push(val.postId)
+                // labelSet.push(val.name)
+            }
+            setData({
+                labels:['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                datasets: [
+                  {
+                    label: 'Dataset ID',
+                    data:dataSet1,
+                    borderColor: 'rgb(255, 99, 132)',
+                    backgroundColor: 'rgba(99, 132, 0.5)',
+                  },
+                  {
+                    label: 'Dataset ID2',
+                    data:dataSet2,
+                    borderColor: 'rgb(53, 162, 235)',
+                    backgroundColor: 'rgba(53, 235, 0.5)',
+                  },
+                ],
+              })
+            console.log("arrData", dataSet1, dataSet2)
+         }).catch(e => {
+                console.log("error", e)
+            })
         }
-      }}
-      data={lineChartData}
-    />
-    </div>
-  );
-};
-export default Whatsapp;
+        
+        fetchData();
+    },[])
+   
+    return(
+        <div style={{width:'80%', height:'50%'}}>
+            {
+                console.log("dataaaaaaaa", data)
+            }
+            <Bar data={data} options={options}/>
+         </div>)
+}
+export default Customer;

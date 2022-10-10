@@ -82,12 +82,10 @@ const Account = () => {
   }
 
   return (
-    <div style={{marginTop : '150px',marginLeft:'254px',position:'fixed'}}>
+    <div>
       <Bar
         data={data}
         height={400}
-        width={974}
-  
         options={options}
 
       />

@@ -1,49 +1,135 @@
-import React from "react";
-import { Bar } from "react-chartjs-2";
+// import logo from './logo.svg';
+// import './Telegram.css';
+import {Bar, Pie, Doughnut} from 'react-chartjs-2'
 
-const Telegram = () => {
-  const barChartData = {
-    labels: ["October", "November", "December"],
-    datasets: [
-      {
-        data: [8137119, 9431691, 10266674],
-        label: "Active User",
-        borderColor: "#3333ff",
-        backgroundColor: "rgba(0, 0, 255, 0.5)",
-        fill: true
-      },
-      {
-        data: [1216410, 1371390, 1477380],
-        label: "Inactive User",
-        borderColor: "#ff3333",
-        backgroundColor: "rgba(255, 0, 0, 0.5)",
-        fill: true
-      }
-    ]
-  };
-
-  const barChart = (
-    
-    
-    <Bar className="telegram"
-      type="bar"
-      width={100}
-      height={50}
-      options={{
-        title: {
-          display: true,
-          text: "COVID-19 Cases of Last 3 Months",
-          fontSize: 15
+function Telegram() {
+  return (
+    <div className="Telegram">
+      <h1>Welcome to ChartJS Demo</h1>
+      <Bar
+      data={{
+        labels:['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets:[{
+          label:'Store 1',
+          data:[100,200,300,400,500,600],
+          backgroundColor:'red',
+          barThickness:12
         },
-        legend: {
-          display: true, //Is the legend shown?
-          position: "top" //Position of the legend.
+        {
+          label:'Store 2',
+          data:[321,212,344,332,223,566],
+          backgroundColor:'green',
+          barThickness:12
+        },
+        {
+          label:'Store 3',
+          data:[123,200,232,400,232,23],
+          backgroundColor:'orange',
+          barThickness:12
+        },
+        {
+          label:'Store 4',
+          data:[100,500,300,343,43,343],
+          backgroundColor:'purple',
+          barThickness:12
+        },
+        ]
+      }}
+      options={{
+        tooltips:{
+          mode:'index',
+          callbacks:{
+            label:function(toolTipItem){
+              return ("Revenue: $"+toolTipItem.value)
+            }
+          }
+
+        },
+        scales:{
+          xAxes:[
+            {
+              gridLines:{
+              color:'cyan'
+            },
+              scaleLabel:{
+                labelString:'Months',
+                display:true,
+                fontColor:'blue',
+                fontSize:20
+              },
+              ticks:{
+                fontColor:'green'
+              }
+            }
+          ],
+          yAxes:[
+          {
+            gridLines:{
+              color:'cyan'
+            },
+            scaleLabel:{
+                labelString:'Revenue',
+                display:true,
+                fontColor:'blue',
+                fontSize:20,
+              },
+            ticks:{
+              beginAtZero:true,
+              fontColor:'green',
+              
+            }
+          }
+          ]
         }
       }}
-      data={barChartData}
-    />
+      >
+
+      </Bar>
+
+      <Pie
+      data={{
+        labels:['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets:[{
+          data:[100,200,300,400,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[20,44,300,33,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[22,200,444,400,500,30],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        }]
+      }
+      }
+      >
+
+      </Pie>
+
+      <Doughnut
+      data={{
+        labels:['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets:[{
+          data:[100,200,300,400,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[20,44,300,33,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[22,200,444,400,500,30],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        }]
+      }
+      }
+      >
+
+      </Doughnut>
+
+    </div>
   );
-  return barChart;
-};
+}
 
 export default Telegram;

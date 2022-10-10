@@ -25,7 +25,7 @@ function Master() {
     ]
   })
   return (
-    <div className="Master" style={{width:'1000px', height:'500px',    display: 'flex',  justifyContent: 'center',    alignItems: 'center',    marginLeft: '271px', marginTop:'86px',position:'fixed'}}>
+    <div className="Master" style={{width:'800px', height:'800px'}}>
       <Line data={data}>Hello</Line>
     </div>
   );

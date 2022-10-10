@@ -37,7 +37,7 @@ const navData = [
   {navItem: "Telegram", href: "/telegram", Icon:BsTelegram },
   {navItem: "SMS", href: "/sms", Icon: MdOutlineSms},
   {navItem: "Report", href: "/report", Icon: MdReportGmailerrorred},
-  {navItem: "Logout", href: "/", Icon: RiLogoutCircleRLine},
+  {navItem: "Logout", href: "/logout", Icon: RiLogoutCircleRLine},
   {navItem: "Reviews", href: "/reviews", Icon: AiFillStar},
   {navItem: "Setting", href: "/setting", Icon: IoIosSettings}];
 

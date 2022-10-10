@@ -25,7 +25,7 @@ function Sales() {
     ]
   })
   return (
-    <div className="Sales" >
+    <div className="Sales" style={{width:'800px', height:'800px'}}>
       <Line data={data}>Hello</Line>
     </div>
   );

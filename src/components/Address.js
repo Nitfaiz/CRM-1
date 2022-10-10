@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link , Navigate} from 'react-router-dom'
 import { createBrowserHistory } from "history";
+// import Contactform from './Contactform';
+// import Description from './Description';
 export default class Address extends Component {
  
 
@@ -43,6 +45,21 @@ export default class Address extends Component {
     this.handleusernameF=this.handleusernameF.bind(this)
     this.handleusernameG=this.handleusernameG.bind(this)
     this.handleusernameH=this.handleusernameH.bind(this)
+    this.handleusernameI=this.handleusernameI.bind(this)
+    this.handleusernameJ=this.handleusernameJ.bind(this)
+    this.handleusernameK=this.handleusernameK.bind(this)
+    this.handleusernameL=this.handleusernameL.bind(this)
+    this.handleusernameM=this.handleusernameM.bind(this)
+    this.handleusernameN=this.handleusernameN.bind(this)
+    this.handleusernameO=this.handleusernameO.bind(this)
+    this.handleusernameP=this.handleusernameP.bind(this)
+    this.handleusernameQ=this.handleusernameQ.bind(this)
+    this.handleusernameR=this.handleusernameR.bind(this)
+    this.handleusernameS=this.handleusernameS.bind(this)
+    this.handleusernameT=this.handleusernameT.bind(this)
+    this.handleusernameU=this.handleusernameU.bind(this)
+    this.handleusernameV=this.handleusernameV.bind(this)
+
 
 
 
@@ -248,87 +265,111 @@ handleusernameL(e){
   render() {
     return (
       <div className='secondpage'>
+      
       {!this.state.register ? <div className='form-container1'>
         <h1 className='heading'>Contact Information</h1>
         <form className='registor-form' onSubmit={this.handlesubmit}>
-         {/* <label>Contact_Owner:</label> */}
-          <input type="text" placeholder='Enter Owner Name' value={this.state.Contact_Owner} onChange={this.handleusernameA} required  className="form-field form-field-signup1" />
-   
-
-          {/* <label>First_Name:</label> */}
-          <input type="text" placeholder='Enter Your First Name' value={this.state.First_Name} onChange={this.handleusernameB}  required className="form-field form-field-signup2"  />
-   
-
-
-          {/* <label> Account_Name:</label> */}
-          <input type="text" placeholder='Enter  Account Name' value={this.state.Account_Name} onChange={this.handleusernameC} required className="form-field form-field-signup3"  />
-         
-          {/* <label> Email:</label> */}
-          <input type="email" placeholder='Enter Your Email' value={this.state.Email} onChange={this.handleusernameD}  required className="form-field form-field-signup4"  />
-
-
-          {/* <label> Phone:</label> */}
-          <input type="number" placeholder='Enter Your Phone no' value={this.state.Phone} onChange={this.handleusernameE}  required className="form-field form-field-signup5"  />
-
-          {/* <label> Other_Phone:</label> */}
-          <input type="number" placeholder='Enter  Other Phone No 'value={this.state.Other_Phone} onChange={this.handleusernameF}  required className="form-field form-field-signup6"  />
-
-          {/* <label>Mobile:</label> */}
-          <input type="number" placeholder='Enter Mobile No 'value={this.state.Mobile} onChange={this.handleusernameG}  required className="form-field form-field-signup7"  />
-
-
-          {/* <label>Assistant:</label> */}
-          <input type="text" placeholder='Assistent details 'value={this.state.Assistant} onChange={this.handleusernameH}  required className="form-field form-field-signup8"  />
-
-          {/* <label>Lead_Source:</label> */}
-          <input type="number" placeholder='Enter Score' value={this.state.Lead_Source} onChange={this.handleusernameI}  required className="form-field form-field-signup9"  />
+         <label>Contact Owner:</label>
+          <input type="text" placeholder='Enter Owner Name' value={this.state.Contact_Owner} onChange={this.handleusernameA} required  className="form-field1" />
           
-          {/* <label>Mailing_State:</label> */}
-          <input type="text" placeholder='Enter Last Name' value={this.state.Mailing_State} onChange={this.handleusernameJ} required className="form-field form-field-signup10"  />
+   
 
-          {/* <label> Vendor_Name:</label> */}
-          <input type="number" placeholder=' Vendor Name' value={this.state.Vendor_Name} onChange={this.handleusernameK}  required className="form-field form-field-signup11"  />
-
-
-          {/* <label> Title:</label> */}
-          <input type="text" placeholder=' Title'value={this.state.Title} onChange={this.handleusernameL}  required className="form-field form-field-signup12"  />
-
-          {/* <label> Department:</label> */}
-          <input type="text" placeholder=' Department'value={this.state.Department} onChange={this.handleusernameM}  required className="form-field form-field-signup13"  />
-
-{/* 
-          <label>Home_Phone:</label> */}
-          <input type="number" placeholder=' Title'value={this.state.Home_Phone} onChange={this.handleusernameN}  required className="form-field form-field-signup14"  />
+          <label>Lead Source:</label>
+          <input type="text" placeholder='Enter Lead' value={this.state.First_Name} onChange={this.handleusernameB}  required className="form-field2"  />
 
 
-          {/* <label> Fax:</label> */}
-          <input type="text" placeholder='Fax 'value={this.state.Fax} onChange={this.handleusernameO}  required className="form-field form-field-signup15"  />
+             <label> First Name:</label>
+             <input type="text" placeholder='Enter Last Name' value={this.state.Mailing_State} onChange={this.handleusernameJ} required className="form-field3"  />
+   
 
 
-          {/* <label>Date_of_Birth:</label> */}
-          <input type="text" placeholder='Enter DOB'value={this.state.Date_of_Birth} onChange={this.handleusernameP}  required className="form-field form-field-signup16"  />
+          <label> Last Name:</label>
+          <input type="text" placeholder='Enter  Last Name' value={this.state.Account_Name} onChange={this.handleusernameC} required className="form-field4"  />
+
+          <label>Account Name:</label>
+          <input type="email" placeholder='Enter Your Account Name' value={this.state.Email} onChange={this.handleusernameD}  required className="form-field5"  />
+
+          <label> Vendor Name:</label>
+          <input type="text" placeholder=' Vendor Name' value={this.state.Vendor_Name} onChange={this.handleusernameK}  required className="form-field6"  />
+
+<div className='laptop'>
+
+  
+<label>Email:</label>
+          <input type="email" placeholder=' Enter Your  Email'value={this.state.Secondary_Email} onChange={this.handleusernameT}  required className="form-field7"  />
+
+</div>
+          <div className='laptop2'>
+          <label> Title:</label>
+          <input type="text" placeholder=' Title'value={this.state.Title} onChange={this.handleusernameL}  required className="form-field"  />
+          </div>
+
+         
 
 
-          {/* <label>Asst_Phone:</label> */}
-          <input type="number" placeholder=' Type Here !'value={this.state.Asst_Phone} onChange={this.handleusernameQ}  required className="form-field form-field-signup17"  />
+          <label> Phone Number:</label>
+          <input type="number" placeholder='Enter Your Phone no' value={this.state.Phone} onChange={this.handleusernameE}  required className="form-field9"  />
+          
+          <label> Department:</label>
+          <input type="text" placeholder=' Department'value={this.state.Department} onChange={this.handleusernameM}  required className="form-field10"  />
+
+          <div className='laptop5'>
+
+<label> Other Phone:</label>
+<input type="number" placeholder='Enter  Other Phone No 'value={this.state.Other_Phone} onChange={this.handleusernameF}  required className="form-field11"  /></div>
+
+<div className='laptop4'>
+          <label>Home Phone:</label>
+          <input type="number" placeholder='Enter Mobile No 'value={this.state.Mobile} onChange={this.handleusernameG}  required className="form-field12"  />
+</div>
+
+
+
+<div className='laptop6'><label>Mobile:</label>
+          <input type="number" placeholder=' Home Phone'value={this.state.Home_Phone} onChange={this.handleusernameN}  required className="form-field7"  />
+</div>
+
+       <div className='laptop7'>
+           <label> Fax:</label>
+           <input type="text" placeholder='Fax 'value={this.state.Fax} onChange={this.handleusernameO}  required className="form-field8"  />
+       </div>
+
+          <label>Assistant:</label>
+          <input type="text" placeholder='Assistent details 'value={this.state.Assistant} onChange={this.handleusernameH}  required className="form-field16"  />
+
+          
+
+
+
+
+
+
+          <label>Date of Birth:</label>
+          <input type="text" placeholder='Enter DOB'value={this.state.Date_of_Birth} onChange={this.handleusernameP}  required className="form-field7"  />
+
+          {/* <label>Asst Phone:</label> */}
+          <input type="number" placeholder=' Assistent No 'value={this.state.Asst_Phone} onChange={this.handleusernameQ}  required className="form-field13"  />
+
 
           {/* <label>Email_opt_out:</label> */}
-          <input type="number" placeholder=' Type Here !'value={this.state.Email_opt_out} onChange={this.handleusernameR}  required className="form-field form-field-signup18"  />
+          <input type="email" placeholder='Email opt-out  'value={this.state.Email_opt_out} onChange={this.handleusernameR}  required className="form-field14"  />
 
 
-          {/* <label>Skype_ID:</label> */}
-          <input type="number" placeholder=' Type Here !'value={this.state.Skype_ID} onChange={this.handleusernameS}  required className="form-field form-field-signup19"  />
+          {/* <label>Skype ID:</label> */}
+          <input type="number" placeholder=' Skype ID'value={this.state.Skype_ID} onChange={this.handleusernameS}  required className="form-field14"  />
 
 
-          {/* <label>Secondary_Email:</label> */}
-          <input type="number" placeholder=' Type Here !'value={this.state.Secondary_Email} onChange={this.handleusernameT}  required className="form-field form-field-signup1"  />
+{/* { <label>Twitter:</label> } */}
+          <input type="email" placeholder='Secondary Email'value={this.state.Twitter} onChange={this.handleusernameU}  required className="form-field14"  />
 
-{/* 
-          <label>Twitter:</label> */}
-          <input type="number" placeholder=' Type Here !'value={this.state.Twitter} onChange={this.handleusernameU}  required className="form-field form-field-signup1"  />
+
+          <input type="text" placeholder='Twitter'value={this.state.Twitter} onChange={this.handleusernameU}  required className="form-field14"  />
+
+
+
 
           {/* <label>Reporting_to:</label> */}
-          <input type="text" placeholder=' Report Here !'value={this.state.Reporting_to} onChange={this.handleusernameV}  required className="form-field form-field-signup1"  />
+          <input type="text" placeholder=' Report Here !'value={this.state.Reporting_to} onChange={this.handleusernameV}  required className="form-field14"  />
 
 
           
@@ -336,11 +377,7 @@ handleusernameL(e){
 
           <br></br>
           <br></br>
-        
-          <button>Submit</button>
-          <div className='sign-up'>
-        
-          </div>
+       
         </form>
         
       </div >:

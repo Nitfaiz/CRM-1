@@ -5,7 +5,7 @@ import {Bar, Pie, Doughnut} from 'react-chartjs-2'
 function Lead() {
   return (
     <div className="Lead">
-      
+      <h1>Welcome to ChartJS Demo</h1>
       <Bar
       data={{
         labels:['Jan','Feb','Mar','Apr','May','Jun'],
@@ -45,17 +45,88 @@ function Lead() {
           }
 
         },
-        
-        
+        scales:{
+          xAxes:[
+            {
+              gridLines:{
+              color:'cyan'
+            },
+              scaleLabel:{
+                labelString:'Months',
+                display:true,
+                fontColor:'blue',
+                fontSize:20
+              },
+              ticks:{
+                fontColor:'green'
+              }
+            }
+          ],
+          yAxes:[
+          {
+            gridLines:{
+              color:'cyan'
+            },
+            scaleLabel:{
+                labelString:'Revenue',
+                display:true,
+                fontColor:'blue',
+                fontSize:20,
+              },
+            ticks:{
+              beginAtZero:true,
+              fontColor:'green',
+              
+            }
+          }
+          ]
+        }
       }}
       >
 
       </Bar>
 
-      
-      
-     
-     
+      <Pie
+      data={{
+        labels:['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets:[{
+          data:[100,200,300,400,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[20,44,300,33,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[22,200,444,400,500,30],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        }]
+      }
+      }
+      >
+
+      </Pie>
+
+      <Doughnut
+      data={{
+        labels:['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets:[{
+          data:[100,200,300,400,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[20,44,300,33,500,600],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        },
+        {
+          data:[22,200,444,400,500,30],
+          backgroundColor:['red','green','orange','purple','cyan','blue'],
+        }]
+      }
+      }
+      >
+
+      </Doughnut>
 
     </div>
   );

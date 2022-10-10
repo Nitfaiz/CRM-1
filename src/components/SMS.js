@@ -17,14 +17,14 @@ const data = {
         ]
     },
   ],
-  // These labels Adminear in the legend and in the tooltips when hovering different arcs
+  // These labels SMSear in the legend and in the tooltips when hovering different arcs
   labels: [
       'Red',
       'Yellow',
       'Blue'
   ], 
 };
-function Admin() {
+function SMS() {
   const [data, setData] = useState({
     datasets: [{
         data: [10, 20, 30],
@@ -76,10 +76,10 @@ function Admin() {
   fetchData();
   }, [])
   return (
-    <div className="Admin" style={{width:'45%', height:'45%' ,marginLeft:'400px',marginTop:'20px',position:'fixed'}}>
+    <div className="SMS" style={{width:'30%', height:'30%'}}>
       <Doughnut data={data}/>
     </div>
   );
 }
 
-export default Admin;
+export default SMS;

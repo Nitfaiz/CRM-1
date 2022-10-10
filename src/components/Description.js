@@ -78,7 +78,7 @@ export default class Description extends Component {
 
 
          <label>Description:</label>
-          <input type="text-area" placeholder='Describe Here !' value={this.state.Description} onChange={this.handleusernameA} required  className="form-field form-field-signup" />
+          <input type="text"     placeholder='Describe Here !' value={this.state.Description} onChange={this.handleusernameA} required  className="form-field19" />
           <br></br>
           <br></br>
         
